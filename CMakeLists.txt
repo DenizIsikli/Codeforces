@@ -3,7 +3,7 @@ project(Codeforces)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# Path the directory to the folder with the problem set .cpp files
+# Path to the directory containing the source files
 set(PROBLEMSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Problemsets)
 
 # Automatically find all .cpp files in the Problemsets directory
