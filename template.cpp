@@ -41,9 +41,14 @@ void read_vector(std::vector<T> &vec) {
 }
 
 template<typename T>
-void print_vector(const std::vector<T> &vec) {
+void print_vector_ws(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val << ' ';
     std::cout << '\n';
+}
+
+template<typename T>
+void print_vector(const std::vector<T> &vec) {
+    for (const T &val : vec) std::cout << val;
 }
 
 int main() {
