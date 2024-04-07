@@ -48,7 +48,9 @@ void print_vector(const std::vector<T> &vec) {
 int main() {
     FAST_IO;
 
-    
+    int m, n;
+    std::cin >> m >> n;
+    std::cout << (m * n) / 2 << '\n';
 
     return 0;
 }
