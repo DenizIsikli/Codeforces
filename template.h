@@ -52,4 +52,3 @@ namespace cf {
 }
 
 #endif // TEMPLATE_H
-
