@@ -18,14 +18,9 @@
 #pragma GCC optimize ("O3")
 #define FAST_IO std::ios::sync_with_stdio(0); std::cin.tie(0); std::cout.tie(0);
 
-// Constants
-const int INF = 1e9+7;
-const long long LINF = 1e18;
-const double EPS = 1e-9;
-const double PI = acos(-1);
-
 // Shortcuts for common data types
 namespace cf {
+    using ll = long long;
     using vi = std::vector<int>;
     using vvi = std::vector<vi>;
     using vl = std::vector<long long>;
@@ -50,5 +45,11 @@ namespace cf {
         std::cout << '\n';
     }
 }
+
+// Constants
+const int INF = 1e9+7;
+const cf::ll LINF = 1e18;
+const double EPS = 1e-9;
+const double PI = acos(-1);
 
 #endif // TEMPLATE_H
