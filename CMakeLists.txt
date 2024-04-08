@@ -13,11 +13,12 @@ file(GLOB PROBLEMSETS_SOURCES "${PROBLEMSETS_DIR}/*.cpp")
 foreach(PROBLEMSET_SOURCE ${PROBLEMSETS_SOURCES})
     # Get the name of the file without the extension to use as the executable name
     get_filename_component(EXECUTABLE_NAME ${PROBLEMSET_SOURCE} NAME_WE)
-    add_executable(${EXECUTABLE_NAME} ${PROBLEMSET_SOURCE})
+    add_executable(${EXECUTABLE_NAME} ${PROBLEMSET_SOURCE}
+            template.h)
 endforeach()
 
 # Prevent showcase of warnings for the template file
-add_library(template_utils STATIC template.cpp)
+add_library(template_utils_cpp STATIC template.cpp)
 
 # Specify that .exe files should be cleaned up
 set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "*.exe")
