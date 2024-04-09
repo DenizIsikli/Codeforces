@@ -74,11 +74,6 @@ int main() {
         levels.insert(y);
     }
 
-    std::vector<int> comparison_vector;
-    for (int i = 1; i <= n; ++i) {
-        comparison_vector.push_back(i);
-    }
-
     if (levels.size() == n) {
         std::cout << "I become the guy." << '\n';
     } else {
