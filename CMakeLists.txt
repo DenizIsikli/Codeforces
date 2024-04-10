@@ -4,7 +4,7 @@ project(Codeforces)
 set(CMAKE_CXX_STANDARD 20)
 
 # Path to the directory containing the source files
-set(PROBLEMSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Problemsets)
+set(PROBLEMSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Problemsets/800Rating)
 
 # Automatically find all .cpp files in the Problemsets directory
 file(GLOB PROBLEMSETS_SOURCES "${PROBLEMSETS_DIR}/*.cpp")
