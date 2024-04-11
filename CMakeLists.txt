@@ -39,6 +39,18 @@ foreach(PROBLEMSET_SOURCE_800 ${PROBLEMSETS_SOURCES_800})
             template.h)
 endforeach()
 
+# Problemsets/900Rating
+set(PROBLEMSETS_DIR_900 ${CMAKE_CURRENT_SOURCE_DIR}/Problemsets/900Rating)
+# CPP files in the 900Rating directory
+file(GLOB PROBLEMSETS_SOURCES_900 "${PROBLEMSETS_DIR_900}/*.cpp")
+
+foreach(PROBLEMSET_SOURCE_900 ${PROBLEMSETS_SOURCES_900})
+    # Filename and add executable
+    get_filename_component(EXECUTABLE_NAME ${PROBLEMSET_SOURCE_900} NAME_WE)
+    add_executable(${EXECUTABLE_NAME} ${PROBLEMSET_SOURCE_900}
+            template.h)
+endforeach()
+
 # Prevent showcase of warnings for the template file
 add_library(template_utils_cpp STATIC template.cpp)
 
