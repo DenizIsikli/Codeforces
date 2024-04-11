@@ -60,16 +60,19 @@ int main() {
     while (t--) {
         int n;
         std::cin >> n;
-        std::string s = std::to_string(n);
-        std::vector<int> numbers;
-        for (int i = 0; i < s.size(); ++i) {
-            if (s[i] != '0') {
-                numbers.push_back((s[i] - '0') * pow(10, s.size() - i - 1));
+        std::vector<int> ans;
+        int p = 1;
+
+        while(n) {
+            if (n%10 != 0) {
+                ans.push_back(n%10*p);
             }
+            n/=10;
+            p*=10;
         }
-        std::cout << numbers.size() << '\n';
-        for (int i : numbers) {
-            std::cout << i << ' ';
+        std::cout << ans.size() << '\n';
+        for (int a : ans) {
+            std::cout << a << ' ';
         }
         std::cout << '\n';
     }
