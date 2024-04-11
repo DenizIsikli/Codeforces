@@ -79,8 +79,6 @@ int main() {
             }
             k--;
         }
-
-
         std::cout << sunken_boats << '\n';
     }
 
