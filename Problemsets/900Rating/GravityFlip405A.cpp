@@ -54,7 +54,14 @@ void print_vector(const std::vector<T> &vec) {
 int main() {
     FAST_IO;
 
+    int n;
+    std::cin >> n;
 
+    vi a(n);
+    read_vector(a);
+
+    std::sort(a.begin(), a.end());
+    print_vector_ws(a);
 
     return 0;
 }
