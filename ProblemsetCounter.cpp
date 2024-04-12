@@ -49,5 +49,9 @@ int main() {
     std::cout << "Total: " << countAllCppFiles(path) << std::endl;
     std::cout << "800Rating: " << countAll800RatingCppFiles(path) << std::endl;
     std::cout << "900Rating: " << countAll900RatingCppFiles(path) << std::endl;
+
+    int external = countAllCppFiles(path) - (countAll800RatingCppFiles(path) + countAll900RatingCppFiles(path));
+    std::cout << "External: " << external << std::endl;
+
     return 0;
 }
