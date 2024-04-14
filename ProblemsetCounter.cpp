@@ -1,8 +1,7 @@
-// make a function that read every file, and sub directory and their files, all being cpp, from the folder named Problemsets, and return the number of cpp files in the folder and its subdirectories if there are any
 #include <iostream>
 #include <filesystem>
 #include <string>
-#include <vector>
+
 
 int countAllCppFiles(const std::string &path) {
     int count = 0;
