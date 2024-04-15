@@ -60,19 +60,30 @@ int main() {
     while (t--) {
         int n;
         std::cin >> n;
+        vi a(n);
+        read_vector(a);
 
-        vi a(n), cnt(100010);
-        for (int i = 0; i < n-1; ++i) {
-            std::cin >> a[i], cnt[a[i]]++;
+        ll maxDiff = 0;
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                maxDiff = std::max(maxDiff, (ll)std::abs(a[i] - a[j]));
+            }
         }
 
-        std::sort(a.begin(), a.end());
-
-        if (a[0] == a[n-1]) {
-            std::cout << 1*n*(n-1) << '\n';
-            return 0;
+        ll pairs = 0;
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                if (std::abs(a[i] - a[j]) == maxDiff) {
+                    ++pairs;
+                }
+            }
         }
-        std::cout << 1*2*cnt[a[n-1]] * cnt[a[0]] << '\n';
+
+        if (maxDiff == 0) {
+            std::cout << pairs/2 << '\n';
+        } else {
+            std::cout << pairs*2 << '\n';
+        }
     }
 
     return 0;
