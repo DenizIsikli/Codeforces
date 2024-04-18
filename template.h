@@ -23,7 +23,7 @@ namespace cf {
     using ll = long long;
     using vi = std::vector<int>;
     using vvi = std::vector<vi>;
-    using vl = std::vector<long long>;
+    using vl = std::vector<ll>;
     using vvl = std::vector<vl>;
     using vs = std::vector<std::string>;
     using pii = std::pair<int, int>;
