@@ -9,6 +9,7 @@
 #include <cmath>
 #include <unordered_map>
 #include <unordered_set>
+#include <numeric>
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
