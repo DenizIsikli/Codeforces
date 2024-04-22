@@ -77,6 +77,7 @@ endforeach()
 
 # Prevent showcase of warnings for the template file
 add_library(template_utils_cpp STATIC template.cpp)
+add_library(template_utils_cpp2 STATIC template2.cpp)
 
 # Specify that .exe files should be cleaned up
 set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "*.exe")
