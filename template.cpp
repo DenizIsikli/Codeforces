@@ -52,8 +52,19 @@ void print_vector(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val;
 }
 
+void solve() {
+
+}
+
 int main() {
     FAST_IO;
+
+    int t;
+    std::cin >> t;
+
+    while (t--) {
+        solve();
+    }
 
     return 0;
 }
