@@ -3,4 +3,5 @@
 .idea/Codeforces.iml
 .idea/
 .idea/*.iml
+/build
 *.exe
