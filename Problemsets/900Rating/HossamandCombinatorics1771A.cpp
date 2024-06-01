@@ -9,6 +9,7 @@
 #include <cmath>
 #include <unordered_map>
 #include <unordered_set>
+#include <numeric>
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
@@ -18,11 +19,13 @@
 using ll = long long;
 using vi = std::vector<int>;
 using vvi = std::vector<vi>;
-using vl = std::vector<long long>;
+using vl = std::vector<ll>;
 using vvl = std::vector<vl>;
 using vs = std::vector<std::string>;
 using pii = std::pair<int, int>;
+using pll = std::pair<ll, ll>;
 using vii = std::vector<pii>;
+using vll = std::vector<pll>;
 using si = std::set<int>;
 using mii = std::map<int, int>;
 using umii = std::unordered_map<int, int>;
@@ -49,6 +52,29 @@ void print_vector_ws(const std::vector<T> &vec) {
 template<typename T>
 void print_vector(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val;
+    std::cout << '\n';
+}
+
+void solve() {
+    ll n;
+    std::cin >> n;
+
+    ll arr[n];
+    for (int i = 0; i < n; ++i) std::cin >> arr[i];
+
+    std::sort(arr, arr+n);
+    ll min = 0, max = n-1;
+    
+    if(arr[0]==arr[n-1]) {
+        std::cout << n*(n-1) << '\n';
+        return;
+    }
+
+    while(arr[0]==arr[min]) ++min;
+    while(arr[n-1]==arr[max]) --max;
+
+    max = n-max-1;
+    std::cout << 2*(max*min) << '\n';
 }
 
 int main() {
@@ -58,32 +84,7 @@ int main() {
     std::cin >> t;
 
     while (t--) {
-        int n;
-        std::cin >> n;
-        vi a(n);
-        read_vector(a);
-
-        ll maxDiff = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                maxDiff = std::max(maxDiff, (ll)std::abs(a[i] - a[j]));
-            }
-        }
-
-        ll pairs = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                if (std::abs(a[i] - a[j]) == maxDiff) {
-                    ++pairs;
-                }
-            }
-        }
-
-        if (maxDiff == 0) {
-            std::cout << pairs/2 << '\n';
-        } else {
-            std::cout << pairs*2 << '\n';
-        }
+        solve();
     }
 
     return 0;
