@@ -57,10 +57,10 @@ void print_vector(const std::vector<T> &vec) {
     std::cout << '\n';
 }
 
-bool good(vector<int>&b){
-    int g = __gcd(b[0], b[1]);
+bool good(vi &b){
+    int g = std::__gcd(b[0], b[1]);
     for(int i = 1; i < int(b.size()) - 1; i++){
-        int cur_gcd = __gcd(b[i], b[i + 1]);
+        int cur_gcd = std::__gcd(b[i], b[i + 1]);
         if(g > cur_gcd) return false;
         g = cur_gcd;
     }
@@ -98,7 +98,7 @@ int main() {
     std::cin >> t;
 
     while(t--){
-        cout << (solve() ? "YES" : "NO") << "\n";
+        std::cout << (solve() ? "YES" : "NO") << "\n";
     }
 
     return 0;
