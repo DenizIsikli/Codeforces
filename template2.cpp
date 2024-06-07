@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <numeric>
+#include <functional>
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
