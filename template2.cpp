@@ -11,6 +11,9 @@
 #include <unordered_set>
 #include <numeric>
 #include <functional>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
