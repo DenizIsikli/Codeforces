@@ -59,5 +59,12 @@ void print_vector(const std::vector<T> &vec) {
 int main() {
     FAST_IO;
 
+    int t;
+    std::cin >> t;
+
+    while (t--) {
+    
+    }
+
     return 0;
 }
