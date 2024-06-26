@@ -10,7 +10,10 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <numeric>
-#include <random>
+#include <functional>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
@@ -24,7 +27,9 @@ using vl = std::vector<ll>;
 using vvl = std::vector<vl>;
 using vs = std::vector<std::string>;
 using pii = std::pair<int, int>;
+using pll = std::pair<ll, ll>;
 using vii = std::vector<pii>;
+using vll = std::vector<pll>;
 using si = std::set<int>;
 using mii = std::map<int, int>;
 using umii = std::unordered_map<int, int>;
@@ -51,22 +56,21 @@ void print_vector_ws(const std::vector<T> &vec) {
 template<typename T>
 void print_vector(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val;
+    std::cout << '\n';
 }
 
 void solve() {
     int n;
-    std::cin >> n;
-    std::vector<int> x(n - 1);
-    for (int i = 0; i < n - 1; ++i) std::cin >> x[i];
-
-    std::vector<int> a(n);
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(1, 1000000000);
-    a[0] = dis(gen);
-    for (int i = 1; i < n; ++i) a[i] = x[i-1]+a[i-1];
-    for (int i = 0; i < n; ++i) std::cout << a[i] << ' ';
-    std::cout << '\n';
+    cin >> n;
+    int s = 1000;
+    cout << s << " ";
+    for (int i = 2; i <= n; ++i) {
+        int x;
+        cin >> x;
+        s+=x;
+        cout << s << " ";
+    }
+    cout << "\n";
 }
 
 int main() {
