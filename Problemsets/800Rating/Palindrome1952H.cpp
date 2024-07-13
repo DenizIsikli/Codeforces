@@ -9,6 +9,11 @@
 #include <cmath>
 #include <unordered_map>
 #include <unordered_set>
+#include <numeric>
+#include <functional>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 // Macros and optimizations
 #pragma GCC optimize ("O3")
@@ -18,7 +23,7 @@
 using ll = long long;
 using vi = std::vector<int>;
 using vvi = std::vector<vi>;
-using vl = std::vector<long long>;
+using vl = std::vector<ll>;
 using vvl = std::vector<vl>;
 using vs = std::vector<std::string>;
 using pii = std::pair<int, int>;
@@ -41,29 +46,34 @@ void read_vector(std::vector<T> &vec) {
 }
 
 template<typename T>
-void print_vector(const std::vector<T> &vec) {
+void print_vector_ws(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val << ' ';
     std::cout << '\n';
+}
+
+template<typename T>
+void print_vector(const std::vector<T> &vec) {
+    for (const T &val : vec) std::cout << val;
 }
 
 int main() {
     FAST_IO;
 
-    int n;
-    std::cin >> n;
+    int t;
+    std::cin >> t;
 
-    while(n--) {
-        std::string s;
-        std::cin >> s;
+    vector<string> s(t);
+    for (auto &c : s) cin >> c;
 
-        std::string reverse_s = s;
-        std::reverse(reverse_s.begin(), reverse_s.end());
-
-        if(s == reverse_s) {
-            std::cout << "YES\n";
-        } else {
-            std::cout << "NO\n";
+    for (int i = 0; i < t; ++i) {
+        string str = "";
+        for (auto &c : s) {
+            if ((int) c.size() > i) str += c[i];
         }
+        string rts = str;
+        reverse(str.begin(), str.end());
+        cout << (str == rts ? "YES" : "NO") << '\n';
     }
+
     return 0;
 }
