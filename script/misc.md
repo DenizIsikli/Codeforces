@@ -15,5 +15,5 @@ chmod +x [script_name].sh
 
 #### Run the executable
 ```bash
-./[script_name]
+./[file_name]
 ```
