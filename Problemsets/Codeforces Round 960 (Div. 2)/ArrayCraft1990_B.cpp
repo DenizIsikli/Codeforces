@@ -60,7 +60,22 @@ void print_vector_ws(const std::vector<T> &vec) {
 }
 
 void solve() {
-
+    int n, x, y;
+    cin >> n >> x >> y;
+    x--, y--;
+    vi a(n);
+    int cur = -1;
+    for (int i = y-1; i >= 0; --i) {
+        a[i] = cur;
+        cur = -cur;
+    }
+    cur = -1;
+    for (int i = x+1; i < n; ++i) {
+        a[i] = cur;
+        cur = -cur;
+    }
+    for (int i = y; i <= x; ++i) a[i] = 1;
+    print_vector(a);
 }
 
 int main() {
