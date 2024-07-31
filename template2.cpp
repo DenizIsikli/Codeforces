@@ -27,7 +27,9 @@ using vl = std::vector<ll>;
 using vvl = std::vector<vl>;
 using vs = std::vector<std::string>;
 using pii = std::pair<int, int>;
+using pll = std::pair<ll, ll>;
 using vii = std::vector<pii>;
+using vll = std::vector<pll>;
 using si = std::set<int>;
 using mii = std::map<int, int>;
 using umii = std::unordered_map<int, int>;
@@ -46,14 +48,15 @@ void read_vector(std::vector<T> &vec) {
 }
 
 template<typename T>
-void print_vector_ws(const std::vector<T> &vec) {
+void print_vector(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val << ' ';
     std::cout << '\n';
 }
 
 template<typename T>
-void print_vector(const std::vector<T> &vec) {
+void print_vector_ws(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val;
+    std::cout << '\n';
 }
 
 int main() {
