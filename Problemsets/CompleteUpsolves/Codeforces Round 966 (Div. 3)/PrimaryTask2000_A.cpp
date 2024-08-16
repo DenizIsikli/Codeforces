@@ -62,7 +62,7 @@ void print_vector_ws(const std::vector<T> &vec) {
 void solve() {
     string s;
     cin >> s;
-    if (s.size() >= 3 && s.substr(0, 2) == '10' && s[2] != '0' && stoi(s.substr(2)) >= 2) {
+    if (s.size() >= 3 && s.substr(0, 2) == "10" && s[2] != '0' && stoi(s.substr(2)) >= 2) {
         cout << "YES" << '\n';
     } else {
         cout << "NO" << '\n';
