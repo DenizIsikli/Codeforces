@@ -60,7 +60,31 @@ void print_vector_ws(const std::vector<T> &vec) {
 }
 
 void solve() {
+    int k, n;
+    cin >> k >> n;
 
+    vi res(k);
+    vi a(n);
+    iota(a.begin(), a.end(), 1);
+    
+    res.push_back(a[0]);
+    res.push_back(a[n-1]);
+
+    int t = 1;
+    int cnt = 1;
+    
+    cout << t << " ";
+    for (int i = 2; i <= k; ++i) {
+        t+=cnt;
+        ++cnt;
+        if (t > n-k+i) {
+            t = n-k+i;
+            cout << t << " ";
+        } else {
+            cout << t << " ";
+        }
+    }
+    cout << "\n";
 }
 
 int main() {
