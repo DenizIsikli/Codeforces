@@ -36,6 +36,8 @@ using umii = std::unordered_map<int, int>;
 using usi = std::unordered_set<int>;
 
 // Constants
+const int MAX_INT = 1e9;
+const int MIN_INT = -1e9;
 const int INF = 1e9+7;
 const ll LINF = 1e18;
 const double EPS = 1e-9;

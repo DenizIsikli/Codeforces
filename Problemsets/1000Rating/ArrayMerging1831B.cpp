@@ -61,6 +61,47 @@ void print_vector_ws(const std::vector<T> &vec) {
     std::cout << '\n';
 }
 
+void solve() {
+    int n;
+    cin >> n;
+
+    vi a(n);
+    vi b(n);
+
+    read_vector(a);
+    read_vector(b);
+
+    map<int, int> aconsec, bconsec;
+    int cnt = 1;
+    int mx = MIN_INT;
+    for (int i = 1; i < n; ++i) {
+        if (a[i] == a[i-1]) ++cnt;
+        else {
+            aconsec[a[i-1]] = max(aconsec[a[i-1]], cnt);
+            mx = max(mx, aconsec[a[i-1]]);
+            cnt = 1;
+        }
+    }
+    aconsec[a[n-1]] = max(aconsec[a[n-1]], cnt);
+    mx = max(mx, aconsec[a[n-1]]);
+
+    cnt = 1;
+    for (int i = 1; i < n; ++i) {
+        if (b[i] == b[i-1]) ++cnt;
+        else {
+            bconsec[b[i-1]] = max(bconsec[b[i-1]], cnt);
+            mx = max(mx, bconsec[b[i-1]]);
+            mx = max(mx, bconsec[b[i-1]]+aconsec[b[i-1]]);
+            cnt = 1;
+        }
+    }
+    bconsec[b[n-1]] = max(bconsec[b[n-1]], cnt);
+    mx = max(mx, bconsec[b[n-1]]);
+    mx = max(mx, bconsec[b[n-1]]+aconsec[b[n-1]]);
+
+    cout << mx << '\n';
+}
+
 int main() {
     FAST_IO;
 
@@ -68,7 +109,7 @@ int main() {
     std::cin >> t;
 
     while (t--) {
-    
+        solve();
     }
 
     return 0;
