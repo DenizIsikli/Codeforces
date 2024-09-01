@@ -36,6 +36,8 @@ using umii = std::unordered_map<int, int>;
 using usi = std::unordered_set<int>;
 
 // Constants
+const int MAX_INT = 1e9;
+const int MIN_INT = -1e9;
 const int INF = 1e9+7;
 const ll LINF = 1e18;
 const double EPS = 1e-9;
@@ -48,24 +50,27 @@ void read_vector(std::vector<T> &vec) {
 }
 
 template<typename T>
-void print_vector_ws(const std::vector<T> &vec) {
+void print_vector(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val << ' ';
     std::cout << '\n';
 }
 
 template<typename T>
-void print_vector(const std::vector<T> &vec) {
+void print_vector_ws(const std::vector<T> &vec) {
     for (const T &val : vec) std::cout << val;
     std::cout << '\n';
 }
 
 void solve() {
-    int n;
-    cin >> n;
-    for (int i = 1; i <= n;  ++i) {
-        cout << i << ' ';
+    int a, b;
+    cin >> a >> b;
+    if (a&1) {
+        cout << "NO" << '\n';
+        return;
+    } else {
+        if (b&1 && a==0) cout << "NO" << '\n';
+        else cout << "YES" << '\n';
     }
-    cout << '\n';
 }
 
 int main() {
@@ -80,3 +85,4 @@ int main() {
 
     return 0;
 }
+
