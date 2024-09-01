@@ -62,9 +62,7 @@ void print_vector(const std::vector<T> &vec) {
 void solve() {
     int n;
     cin >> n;
-    for (int i = 1; i <= n;  ++i) {
-        cout << i << ' ';
-    }
+    for (int i = 1; i <= n;  ++i) cout << i << ' ';
     cout << '\n';
 }
 
