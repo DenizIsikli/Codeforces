@@ -35,6 +35,8 @@ const ll LINF = 1e18;
 const double EPS = 1e-9;
 const double PI = acos(-1);
 
+using namespace std;
+
 // Template functions
 template<typename T>
 void read_vector(std::vector<T> &vec) {
@@ -55,12 +57,22 @@ void print_vector(const std::vector<T> &vec) {
 void solve() {
     int n, k;
     std::cin >> n >> k;
-    vi dp(n);
-    read_vector(dp);
-    int t(0);
+    int ans = 1e9;
+    int even = 0;
 
-    for (int i = 0; i < n-1; i++) t = std::max(t, dp[i]-dp[i+1]-k);
-    std::cout << t << '\n';
+    for (int i = 0; i < n; i++) {
+        int value; cin >> value;
+        if (value%2==0) even++;
+        if (value%k==0) ans=0;
+        else {
+            ans = min(ans,k-value%k);
+        }
+    }
+    if (k==4) {
+        if (even>=2) ans=0;
+        else ans = min(ans, 2-even);
+    }
+    cout << ans << '\n';
 }
 
 int main() {
