@@ -62,11 +62,9 @@ void print_vector_ws(const std::vector<T> &vec) {
 }
 
 void solve() {
-    int n;
-    cin >> n;
+    int n; cin >> n;
  
     bool zero = 0;
- 
     int sign = 1;
     
     for(int i = 0, x; i < n; i++){
