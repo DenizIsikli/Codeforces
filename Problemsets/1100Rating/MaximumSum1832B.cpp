@@ -34,6 +34,7 @@ const int INF = 1e9+7;
 const ll LINF = 1e18;
 const double EPS = 1e-9;
 const double PI = acos(-1);
+const int MIN_INT = -1e9;
 
 // Template functions
 template<typename T>
@@ -73,7 +74,7 @@ int main() {
             pref[i] = pref[i-1] + a[i-1];
         }
 
-        ll total = INT_MIN;
+        ll total = MIN_INT;
 
         for (int i = 0; i <= k; ++i) {
             total = std::max(total, pref[n-i]-pref[2*(k-i)]);
