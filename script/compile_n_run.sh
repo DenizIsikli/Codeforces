@@ -23,7 +23,7 @@ filename_without_extension="${filename%.*}"
 output_executable="$executables_dir/$filename_without_extension"
 
 # Compile the C++ file with the desired C++ standard
-g++ -std=c++20 -o "$output_executable" "$1" template.h
+g++ -std=c++20 -o "$output_executable" "$1"
 
 # Check if the compilation was successful
 if [ $? -eq 0 ]; then
