@@ -1,6 +1,7 @@
 /cmake-build-default
 /cmake-build-debug
 .idea/Codeforces.iml
+/script/executables
 .idea/
 .idea/*.iml
 /build
