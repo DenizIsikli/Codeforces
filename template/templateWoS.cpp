@@ -15,10 +15,6 @@
 
 using namespace std;
 
-// Macros and optimizations
-#pragma GCC optimize ("O3")
-#define FAST_IO std::ios::sync_with_stdio(0); std::cin.tie(0); std::cout.tie(0);
-
 // Common data types
 using ll = long long;
 using vi = std::vector<int>;
@@ -62,7 +58,8 @@ void print_vector_ws(const std::vector<T> &vec) {
 }
 
 int main() {
-    FAST_IO;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int t;
     std::cin >> t;
