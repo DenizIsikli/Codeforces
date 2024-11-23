@@ -20,7 +20,6 @@ using ll = long long;
 const int MAX_INT = 1e9;
 const int MIN_INT = -1e9;
 
-// Template functions
 template<typename T>
 void read_vector(std::vector<T> &vec) {
     for (T &val : vec) std::cin >> val;
