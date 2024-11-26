@@ -32,6 +32,7 @@ void solve() {
     for (int i = q; i < b; i++) cout << string(p, 'R') << 'B';
     cout << string(p, 'R');
     cout << '\n';
+
 }
 
 int main() {
@@ -47,3 +48,4 @@ int main() {
 
     return 0;
 }
+
