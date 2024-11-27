@@ -59,7 +59,7 @@ void solve() {
             sum += grid[x - i][y - i];
         }
 
-        return sum - (grid[x][y]*3);
+        return sum - (grid[x][y] * 3);
     };
 
     for (int i = 0; i < n; i++) {
