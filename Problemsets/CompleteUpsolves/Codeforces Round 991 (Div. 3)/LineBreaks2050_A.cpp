@@ -26,7 +26,17 @@ void read_vector(std::vector<T> &vec) {
 }
 
 void solve() {
+    int n, m;
+    cin >> n >> m;
+    int cnt = 0;
 
+    for (int i = 0; i < n; i++) {
+        string x;
+        cin >> x;
+        m-=x.size();
+        if(m>=0) cnt++;
+    }
+    cout << cnt << '\n';
 }
 
 int main() {
