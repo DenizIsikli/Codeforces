@@ -14,8 +14,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+using vi = std::vector<int>;
 
-using ll = long long;
+#define int long long
 
 const int MAX_INT = 1e9;
 const int MIN_INT = -1e9;
@@ -29,7 +30,7 @@ void solve() {
 
 }
 
-int main() {
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
