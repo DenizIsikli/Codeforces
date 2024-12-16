@@ -31,13 +31,13 @@ g++ -std=c++20 -o $outputExecutable $sourceFile
 
 # Check if the compilation was successful
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "Compilation successful!" -ForegroundColor Green
+    Write-Host "Compilation successful" -ForegroundColor Green
     Write-Host "Executable saved to $outputExecutable" -ForegroundColor Yellow
-    Write-Host "Running the program..." -ForegroundColor Cyan
+    Write-Host "Running the program" -ForegroundColor Cyan
 
     # Run the executable
     & $outputExecutable
 }
 else {
-    Write-Host "Compilation failed!" -ForegroundColor Red
+    Write-Host "Compilation failed" -ForegroundColor Red
 }
