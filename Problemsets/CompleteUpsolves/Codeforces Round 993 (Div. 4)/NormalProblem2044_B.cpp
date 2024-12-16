@@ -11,7 +11,6 @@
 #include <unordered_set>
 #include <numeric>
 #include <functional>
-#include <bits/stdc++.h>
 
 using namespace std;
 using vi = std::vector<int>;
