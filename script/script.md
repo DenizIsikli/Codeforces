@@ -33,19 +33,25 @@ cd "C:\path\to\your\script"
 ```
 
 #### 2. Allow script execution *(Run once if needed)*  
+
+##### Command Prompt (Invoke)
 ```cmd
 powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
 ```
 
+##### PowerShell
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 #### 3. Run the script with a C++ file  
+
+##### Command Prompt (Invoke)
 ```cmd
 powershell -File "C:\path\to\compile_and_run.ps1" "C:\path\to\your\file.cpp"
 ```
 
+##### PowerShell
 ```powershell
 .\[script_name].ps1 "C:\path\to\file.cpp"
 ```
