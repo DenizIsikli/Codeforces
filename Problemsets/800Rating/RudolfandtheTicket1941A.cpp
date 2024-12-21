@@ -11,7 +11,6 @@
 #include <unordered_set>
 #include <numeric>
 #include <functional>
-#include <bits/stdc++.h>
 
 using namespace std;
 using vi = std::vector<int>;
@@ -27,7 +26,26 @@ void read_vector(std::vector<T> &vec) {
 }
 
 void solve() {
+    int n, m, k;
+    cin >> n >> m >> k;
 
+    vector<int> b(n);
+    vector<int> c(m);
+
+    read_vector(b);
+    read_vector(c);
+
+    int res = 0;
+
+    for (int i = 0; i < n; i++) {
+        int temp = 0;
+        for (int j = 0; j < m; j++) {
+            if (b[i]+c[j]<=k) {
+                res++;
+            }
+        }
+    }
+    cout << res << '\n';
 }
 
 signed main() {
