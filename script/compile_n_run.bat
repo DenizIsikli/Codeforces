@@ -32,7 +32,7 @@ g++ -std=c++20 -o "%output_executable%" "%~1"
 if %ERRORLEVEL%==0 (
     echo Compilation successful
     echo Executable saved to "%output_executable%"
-    echo Running the program...
+    echo Running the program
     "%output_executable%"
 ) else (
     echo Compilation failed
