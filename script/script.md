@@ -1,4 +1,3 @@
-
 ### **Linux Instructions**
 
 #### 1. Open the terminal (:term)  
@@ -21,6 +20,24 @@ chmod +x [script_name].sh
 ```bash
 ./[file_name]
 ```
+
+---
+
+### **Windows Batch (CMD) Instructions**
+
+#### 1. Open Command Prompt  
+Navigate to the directory where the script is located:  
+```cmd
+cd C:\path\to\your\script
+```
+
+#### 2. Run the script with a C++ file  
+```cmd
+compile_and_run.bat C:\path\to\your\file.cpp
+```
+
+#### 3. Run the executable  
+The script will automatically compile and run the file if there are no errors.
 
 ---
 
@@ -58,3 +75,4 @@ powershell -File "C:\path\to\compile_and_run.ps1" "C:\path\to\your\file.cpp"
 
 #### 4. Run the executable  
 The script will automatically compile and run the file if there are no errors.
+
