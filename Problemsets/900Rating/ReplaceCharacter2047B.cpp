@@ -27,7 +27,21 @@ void read_vector(std::vector<T> &vec) {
 }
 
 void solve() {
+    int n; cin >> n;
+    string s; cin >> s;
+    map<char, int> fq;
+    for (char &c: s) {
+        fq[c]++;
+    }
 
+    vector<pair<int, char>> fq_vec;
+    for (auto &p: fq) {
+        fq_vec.push_back({p.second, p.first});
+    }
+
+    std::sort(fq_vec.begin(), fq_vec.end());
+    s[s.find(fq_vec[0].second)] = fq_vec.back().second;
+    cout << s << '\n';
 }
 
 signed main() {
