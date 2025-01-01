@@ -1,3 +1,3 @@
 Codeforces Round 991 (Div. 3)
 7 problems.
-Solved A.
+Solved A, B and C.
