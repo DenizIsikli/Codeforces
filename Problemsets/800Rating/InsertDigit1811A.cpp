@@ -27,7 +27,21 @@ void read_vector(std::vector<T> &vec) {
 }
 
 void solve() {
-    
+    int n;
+    char d;
+    cin >> n >> d;
+    string s;
+    cin >> s;
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] < d) {
+            s.insert(i, 1, d);
+            cout << s << '\n';
+            return;
+        }
+    }
+
+    s.push_back(d);
+    cout << s << '\n';
 }
 
 signed main() {
