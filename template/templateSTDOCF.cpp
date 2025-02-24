@@ -12,23 +12,15 @@
 #include <numeric>
 #include <functional>
 
+#define int long long
+
 using namespace std;
-
-using ll = long long;
-
-const int MAX_INT = 1e9;
-const int MIN_INT = -1e9;
-
-template<typename T>
-void read_vector(std::vector<T> &vec) {
-    for (T &val : vec) std::cin >> val;
-}
 
 void solve() {
 
 }
 
-int main() {
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
