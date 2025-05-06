@@ -22,7 +22,7 @@ void solve() {
     int x = 1;
     while ((k*x)%10 != 0 && (k*x)%10 != r) {
         x++;
-    }
+    }
     cout << x << '\n';
 }
 
