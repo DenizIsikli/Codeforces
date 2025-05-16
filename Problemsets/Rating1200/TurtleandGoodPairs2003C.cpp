@@ -22,6 +22,7 @@ void solve() {
     string s;
     cin >> s;
 
+    sort(s.begin(), s.end());
     for (int i = 0; i < n/2; i++) {
         cout << s[i] << s[n-i-1];
     }
