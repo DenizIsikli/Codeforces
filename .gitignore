@@ -1,9 +1,16 @@
+# Build dirs
 /cmake-build-default
 /cmake-build-debug
-.idea/Codeforces.iml
-/script/executables
-.idea/
-.idea/*.iml
 /build
-/.vscode
+
+# IDE config
+.idea/
+
+# Executables
 *.exe
+
+# Scripts
+/script/executables
+
+# Git
+.git/
