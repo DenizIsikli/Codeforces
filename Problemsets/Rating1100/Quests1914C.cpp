@@ -16,23 +16,15 @@
 
 using namespace std;
 
+int a[200005], b[200005];
+
 void solve() {
     int n, k;
     cin >> n >> k;
-    vector<int> a(n);
-    vector<int> b(n);
-    for (int i = 1; i <= n; i++) {
-        cin >> a[i];
-        a[i] += a[i-1];
-    }
-    for (int i = 1; i <= n; i++) {
-        cin >> b[i];
-        b[i] = max(b[i], b[i-1]);
-    }
     int res = 0;
-    for (int i = 1; i <= min(n, k); i++) {
-        res = max(res, a[i]+(k-i)*b[i]);
-    }
+    for (int i = 1; i <= n; i++) { cin >> a[i]; a[i] += a[i-1]; }
+    for (int i = 1; i <= n; i++) { cin >> b[i]; b[i] = max(b[i], b[i-1]); }
+    for (int i = 1; i <= min(n, k); i++) { res = max(res, a[i]+(k-i)*b[i]); }
     cout << res << '\n';
 }
 
