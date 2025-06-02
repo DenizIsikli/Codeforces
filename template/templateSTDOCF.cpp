@@ -13,6 +13,7 @@
 #include <functional>
 
 #define int long long
+#define endl '\n'
 
 using namespace std;
 
