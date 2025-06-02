@@ -12,6 +12,9 @@
 #include <numeric>
 #include <functional>
 
+#define int long long
+#define endl '\n'
+
 using namespace std;
 
 using ll = long long;
