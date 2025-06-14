@@ -22,16 +22,19 @@ int n,arr[maxn];
 
 void solve() {
     cin>>n;
-    for(int i=1;i<=n;i++)
-     cin>>arr[i];
-    int ans=0;
-    for(int i=1;i<=n;i++){
-     int add=1;
-     for(int j=1;j<i;j++)
-        if(arr[j]==arr[i])
+    for(int i=1;i<=n;i++) {
+        cin>>arr[i];
+    }
 
-           add=0;
-     ans+=add;
+    int ans=0;
+    for(int i=1;i<=n;i++) {
+        int add=1;
+        for(int j=1;j<i;j++) {
+            if(arr[j]==arr[i]) {
+                add=0;
+            }
+        }
+        ans+=add;
     }
     cout<<ans<<"\n";
 }
