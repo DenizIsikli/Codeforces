@@ -18,19 +18,11 @@
 using namespace std;
 
 void solve() {
-    int n,k;
-    cin>>n>>k;
-    vector<int>a(n+1);
-    for(int i=1;i<=n;i++){cin>>a[i];}
-    int p=1;
-    while(p<=n&&a[p]<=a[k])p++;
-    if(p>k)cout<<p-2<<endl;
-    else{
-        int tp=p+1;
-        while(a[tp]<a[k])tp++;
-        cout<<(max(tp-p-(p==1),p-2))<<endl;
-    }
-    cout<<res<<endl;
+    int n;
+    cin>>n;
+    vector<int>cnt(4);
+    for(int i=0;i<n;i++)cnt[i%4]++;
+    cout<<(cnt[0]==cnt[3]&&cnt[1]==cnt[2]?"Bob":"Alice")<<endl;
 }
 
 signed main() {
