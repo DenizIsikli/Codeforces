@@ -24,10 +24,10 @@ void solve() {
     q=max(abs(d1),abs(d2));
     cout<<q<<endl;
     for(int i=1;i<=q;i++){
-        if(d1 > 0){cout << 'R';d1--;}
-        if(d1 < 0){cout << 'L';d1++;}
-        if(d2 < 0){cout << 'D';d2++;}
-        if(d2 > 0){cout << 'U';d2--;}
+        if(d1>0){cout<<'R';d1--;}
+        if(d1<0){cout<<'L';d1++;}
+        if(d2<0){cout<<'D';d2++;}
+        if(d2>0){cout<<'U';d2--;}
         cout<<endl;
     }
 }
