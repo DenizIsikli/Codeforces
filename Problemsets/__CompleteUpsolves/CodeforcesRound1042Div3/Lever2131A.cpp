@@ -23,7 +23,7 @@ void solve() {
     vector<int>a(n),b(n);
     for(auto&x:a)cin>>x;
     for(auto&x:b)cin>>x;
-    int ans=0;
+    int ans=1;
     for(int i=0;i<n;i++){
         if(a[i]>b[i])ans+=a[i]-b[i];
     }
