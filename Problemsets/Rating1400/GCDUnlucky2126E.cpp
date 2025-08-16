@@ -17,29 +17,32 @@
 
 using namespace std;
 
+auto lcm = [](int a, int b) {
+    return (a / __gcd(a, b)) * b;
+}; 
+
 void solve() {
     int n;
     cin>>n;
-    vector<int>a(n),b(n);
+    int a[n+1];
+    int b[n+1];
     for(int i=1;i<=n;i++)cin>>a[i];
     for(int i=1;i<=n;i++)cin>>b[i];
-    bool f=1;
-    if(a[n]!=b[1]){
-        cout<<"NO"<<endl;
-        return;
+    int ans[n+1];
+    for(int i=n;i>=1;i--){
+        ans[i]=lcm(a[i],b[i]);
     }
-    for(int i=1;i<n;i++){
-        if(a[i]%a[i+1]!=0)f=0;
-        if(b[i+1]%b[i]!=0)f=0;
+    bool ch=1;
+    if(ans[1]!=a[1])ch=0;
+    if(ans[n]!=b[n])ch=0;
+    for(int i=2;i<=n;i++){
+        if(__gcd(a[i-1],ans[i])!=a[i])ch=0;
     }
-    for(int i=1;i<n;i++){
-        if(__gcd(a[i],b[i+1])!=a[n])f=0;
+    for(int i=n-1;i>=1;i--){
+        if(__gcd(b[i+1],ans[i])!=b[i])ch=0;
     }
-    if(f==0){
-        cout<<"NO"<<endl;
-        return;
-    }
-    cout<<"YES"<<endl;
+    if(ch)cout<< "YES" << endl;
+    else cout << "NO" << endl; 
 }
 
 signed main() {
