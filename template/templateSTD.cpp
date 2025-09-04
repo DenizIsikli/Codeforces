@@ -1,16 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
-#include <string>
-#include <queue>
-#include <stack>
-#include <cmath>
-#include <unordered_map>
-#include <unordered_set>
-#include <numeric>
-#include <functional>
+#include <bits/stdc++.h>
 
 #define int long long
 #define endl '\n'
