@@ -20,11 +20,13 @@ using namespace std;
 int n,k,x;
 vector<int>a(n);
 
-void solve() {
+void solve(){
+    int n,k,x;
     cin>>n>>k>>x;
+    vector<int>a(n);
     for(int i=0;i<n;i++)cin>>a[i];
     if(accumulate(a.begin(),a.end(),0ll)*k<x){
-        cout<<"NO"<<endl;
+        cout<<0<<'\n';
         return;
     }
     int l=1,r=n*k;
@@ -32,12 +34,15 @@ void solve() {
         int m=l+(r-l)/2;
         int cnt_a=(n*k-m+1)/n;
         int suff=(n*k-m+1)%n;
-        int sum=cnt_a*accumulate(a.begin(),a.end(),0ll);
+        long long sum=1ll*cnt_a*accumulate(a.begin(),a.end(),0ll);
         for(int i=n-suff;i<n;i++)sum+=a[i];
-        if(sum<x)l=m+1;
-        else r=m-1;
+        if(sum<x){
+            r=m-1;
+        }else{
+            l=m+1;
+        }
     }
-    cout<<r<<endl;
+    cout<<r<<'\n';
 }
 
 signed main() {
