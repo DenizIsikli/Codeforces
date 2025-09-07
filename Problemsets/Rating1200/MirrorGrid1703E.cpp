@@ -6,30 +6,19 @@
 using namespace std;
 
 int n;
-pair<int,int>cntOne,cntZero;
-vector<vector<int>>a(n,vector<int>(n));
-
-pair<int,int> f(vector<int>v){
-    int cnt1=0,cnt0=0;
-    for(auto x:v){
-        if(x==1)cnt1++;
-        else cnt0++;
-    }
-    return {cnt1,cnt0};
-}
+string s[100006];
 
 void solve() {
     cin>>n;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            int x;cin>>x;
-            a[i][j]=x;
+    int ans=0;
+    for(int i=0;i<n;i++)cin>>s[i];
+    for(int i=0;i<(n+1)/2;i++){
+        for(int j=0;j<n/2;j++){
+            int t=s[i][j]-'0'+s[j][n-i-1]-'0'+s[n-i-1][n-j-1]-'0'+s[n-j-1][i]-'0';
+            ans+=min(t,4-t);
         }
     }
-    int ans=0;
-    for(int i=0;i<n/2;i++){
-
-    }
+    cout<<ans<<endl;
 }
 
 signed main() {
