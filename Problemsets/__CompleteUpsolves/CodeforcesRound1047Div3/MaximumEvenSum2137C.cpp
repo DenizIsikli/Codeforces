@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+#define int long long
+#define endl '\n'
+
+using namespace std;
+
+void solve() {
+    int a,b;
+    cin>>a>>b;
+    if(b%2)a*=(b/2)+2;
+    else a*=b+1;
+    if(a%2)cout<<"-1"<<endl;
+    else cout<<a<<endl;
+}
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    std::cin >> t;
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
+
