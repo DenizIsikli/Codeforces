@@ -8,8 +8,8 @@ using namespace std;
 void solve() {
     int a,b;
     cin>>a>>b;
-    if(b%2)a*=(b/2)+2;
-    else a*=b+1;
+    if(b%2==0)a=a*(b/2)+2;
+    else a=a*b+1;
     if(a%2)cout<<"-1"<<endl;
     else cout<<a<<endl;
 }
