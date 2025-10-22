@@ -16,6 +16,7 @@ void solve() {
     for(int i=2;i<=n;i+=2)a[i]=f[i];
     int ans=0;
     for(int i=1;i<=n;i+=2)ans+=max(a[i]-min(a[i-1],a[i+1])+1,0ll);
+    cout<<ans<<endl;
 }
 
 signed main() {
