@@ -29,4 +29,3 @@ This makes compiling and running your solutions faster and easier during contest
 
 ## LICENSE
 - [MIT License](LICENSE)
-
