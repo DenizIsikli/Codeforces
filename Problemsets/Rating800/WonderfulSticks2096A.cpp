@@ -11,14 +11,8 @@ void solve(){
     int l=1,r=n;
     vector<int>a(n);
     for(int i=n-2;i>=0;i--){
-        if(s[i]=='<'){
-            a[i+1]=l;
-            l++;
-        }
-        if(s[i]=='>'){
-            a[i]=r;
-            r--;
-        }
+        if(s[i]=='<')a[i+1]=l++;
+        if(s[i]=='>')a[i+1]=r--;
     }
     a[0]=l;
     for(int i=0;i<n;i++){
