@@ -66,7 +66,6 @@ int main() {
             std::cin >> x;
             ++count[x];
         }
-
         ll res = 0;
         for (int i = 1; i <= 100; i++) {
             res += count[i]/3;
