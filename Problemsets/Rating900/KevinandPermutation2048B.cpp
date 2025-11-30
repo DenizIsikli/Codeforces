@@ -6,10 +6,14 @@ using namespace std;
 void solve(){
     int n,k;
     cin>>n>>k;
-    int cnt=n/k;
-    for(int i=1;i<=n;i++){
-        cout<<(i%k?++cnt:i/k)<<endl;
+    int low=1,high=n;
+    while(low<=high){
+        for(int j=0;j<k-1 && high>low;j++){
+            cout<<high--<<" ";
+        }
+        cout<<low++<<" ";
     }
+    cout<<endl;
 }
 
 signed main() {
