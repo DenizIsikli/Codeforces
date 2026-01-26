@@ -4,7 +4,7 @@
 using namespace std;
 void solve(){
     int n;cin>>n;
-    std::vector<int >a(n) ;
+    std::vector<int>a(n) ;
     unordered_map<int,int>mp;
     for(int i=0;i<n;i++)cin>>a[i],mp[a[i]]=i;
     for(int i=0;i<n;i++){
