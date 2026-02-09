@@ -7,8 +7,6 @@ This repository contains my solutions to the problems on [Codeforces](https://co
 ## Template Setup For C++
 - templateSTD.cpp (Standard Template)
 - templateSTDOCF.cpp (Old School Codeforce Template)
-- templateWS.cpp (Template W. Solve Function)
-- templateWoS.cpp (Template Wo. Solve Function)
 
 ## Compile and Run Script Setup (Optional)
 To simplify compiling and running your C++ solutions, you can use the included PowerShell script located in the `script` folder.
