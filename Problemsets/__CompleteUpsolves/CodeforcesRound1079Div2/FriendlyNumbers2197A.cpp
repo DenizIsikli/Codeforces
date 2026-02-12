@@ -8,8 +8,8 @@ void solve(){
     int ans=0;
     for(int i=0;i<=90;i++){
         int X=x+i,s=0;
-        while(X) s+=X%10,X/=10;
-        if(s==i) ans++;
+        while(X)s+=X%10,X/=10;
+        if(s==i)ans++;
     }
     cout<<ans<<endl;
 }
