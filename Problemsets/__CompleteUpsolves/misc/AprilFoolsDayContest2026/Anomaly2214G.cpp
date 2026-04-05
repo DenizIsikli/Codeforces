@@ -7,6 +7,6 @@ int main(){
         int i;
         cin>>i;
         string s="bigchadjeff";
-        return s[i-1];
+        cout<<s[i-1]<<endl;
     }
 }
