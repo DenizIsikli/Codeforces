@@ -4,9 +4,9 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        int n;
-        cin>>n;
+        int i;
+        cin>>i;
         string s="bigchadjeff";
-        return s[n];
+        return s[i-1];
     }
 }
