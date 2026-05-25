@@ -4,20 +4,18 @@
 using namespace std;
 void solve(){
     int n,k;cin>>n>>k;
-    vector<int>a(n);
-    for(auto &x:a)cin>>x;
-    unordered_map<int,int>fq;
-    for(auto x:a)fq[x]++;
-    vector<int>freq;
-    for(auto&[x,y]:fq)freq.push_back(y);
-    sort(freq.begin(),freq.end());
-    int ans=freq.size();
-    for(auto x:freq){
-        if(k>=x){
-            k-=x;
-            ans--;
-        }
-        else break;
+    map<int,int>mp;
+    for(int i=0;i<n;i++){
+        int x;cin>>x;
+        mp[x]++;
+    }
+    multiset<int>st;
+    for(auto x:mp){
+        st.insert(x.second);
+    }
+    int ans=st.size();
+    for(int x:st){
+        if(k>=x)k-=x,ans--;
     }
     cout<<max(1LL,ans)<<endl;
 }
@@ -30,9 +28,3 @@ signed main() {
     }
     return 0;
 }
-
-// Kotlin Version (Original language of the problem statement)
-// from collections import*
-// I=input
-// for _ in[0]*int(I()):k=int(I().split()[1]);c=Counter(a:=I().split());print(len({*sorted((c[x],x)for
-// x in a)[k:]})or 1)
