@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#define int long long
+#define endl '\n'
+using namespace std;
+void solve(){
+    int n;cin>>n;
+    vector<int> a(n);
+    for(int i=0;i<n;i++)cin>>a[i];
+    int ans=1e9,sum=0;
+    for(int i=0;i<n;i++){
+        sum+=a[i];
+        ans=min(ans,sum/(i+1));
+        cout<<ans<<" ";
+    }
+    cout<<endl;
+}
+signed main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t; cin >> t;
+    while(t--)solve();
+    return 0;
+}
