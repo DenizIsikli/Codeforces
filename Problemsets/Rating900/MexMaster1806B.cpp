@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+#define int long long
+#define endl '\n'
+using namespace std;
+void solve(){
+    int n;cin>>n;
+    bool f=false;
+    int sm=0;
+    for(int i=0;i<n;i++){
+        int x;cin>>x;
+        if(x==0)sm++;
+        else if(x>=2)f=true;
+    }
+    if(sm<=(n+1)/2)cout<<0<<endl;
+    else if(f||sm==n)cout<<1<<endl;
+    else cout<<2<<endl;
+}
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
